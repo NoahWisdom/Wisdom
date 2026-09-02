@@ -87,8 +87,8 @@ stageButtons.forEach((btn) => {
    ========================================================= */
 const knowledgeBase = [
   {
-    keywords: ['what does he do', 'what do you do', 'who is alex', 'who are you'],
-    answer: 'Alex builds AI-powered systems for small businesses — websites, AI assistants, automation with tools like n8n, and the pieces that connect them, so attention turns into customers instead of leaking away.'
+    keywords: ['what does he do', 'what do you do', 'who is wisdom', 'who are you'],
+    answer: 'Wisdom builds AI-powered systems for small businesses — websites, AI assistants, automation with tools like n8n, and the pieces that connect them, so attention turns into customers instead of leaking away.'
   },
   {
     keywords: ['chatbot', 'ai assistant', 'build an ai'],
@@ -112,11 +112,11 @@ const knowledgeBase = [
   },
   {
     keywords: ['contact', 'reach', 'hire', 'work with'],
-    answer: 'You can use the contact section below — email, WhatsApp, or just keep chatting here and I\u2019ll make sure it gets to Alex directly.'
+    answer: 'You can use the contact section below — email, WhatsApp, or just keep chatting here and I\u2019ll make sure it gets to wisdom directly.'
   },
   {
     keywords: ['learning', 'skills', 'experience', 'how long'],
-    answer: 'Alex is upfront about this: current skills are HTML, CSS, JavaScript, AI-assisted development, n8n automation, and basic chatbots — with backend systems and AI engineering as the next things being built toward.'
+    answer: 'wisdom is upfront about this: current skills are HTML, CSS, JavaScript, AI-assisted development, n8n automation, and basic chatbots — with backend systems and AI engineering as the next things being built toward.'
   }
 ];
 
@@ -157,7 +157,7 @@ function askQuestion(question) {
   const answer = findAnswer(question);
   window.setTimeout(() => {
     appendMessage(
-      answer || 'I don\u2019t have a good answer for that one yet. Use the contact section below and Alex can answer you directly.',
+      answer || 'I don\u2019t have a good answer for that one yet. Use the contact section below and wisdom can answer you directly.',
       'bot'
     );
   }, 250);
