@@ -77,10 +77,16 @@ flowNodes.forEach((node) => {
     if (flowTooltip && flowDescriptions[key]) {
       flowTooltip.textContent = flowDescriptions[key];
     }
+    document.querySelectorAll('.flow-links line').forEach((line) => {
+      line.classList.add('is-lit');
+    });
   });
   node.addEventListener('mouseleave', () => {
     node.classList.remove('is-active');
     if (flowTooltip) flowTooltip.textContent = '';
+    document.querySelectorAll('.flow-links line').forEach((line) => {
+      line.classList.remove('is-lit');
+    });
   });
   node.addEventListener('focus', () => {
     const key = node.dataset.key;
@@ -92,6 +98,52 @@ flowNodes.forEach((node) => {
     if (flowTooltip) flowTooltip.textContent = '';
   });
 });
+
+/* =========================================================
+   Problem section — interactive "with system" flow
+   ========================================================= */
+const flowWith = document.getElementById('flowWith');
+if (flowWith) {
+  const goodNodes = flowWith.querySelectorAll('.fv-good');
+  const endNode = flowWith.querySelector('.fv-end-good');
+  let stepIdx = 0;
+  let stepTimer = null;
+
+  function startFlowAnimation() {
+    flowWith.classList.add('is-active');
+    goodNodes.forEach((n) => n.classList.remove('is-step-active'));
+    if (endNode) endNode.classList.remove('is-step-active');
+    stepIdx = 0;
+    if (stepTimer) clearTimeout(stepTimer);
+
+    function nextStep() {
+      if (stepIdx > 0 && goodNodes[stepIdx - 1]) {
+        goodNodes[stepIdx - 1].classList.remove('is-step-active');
+      }
+      if (stepIdx < goodNodes.length) {
+        goodNodes[stepIdx].classList.add('is-step-active');
+        stepIdx++;
+        stepTimer = setTimeout(nextStep, 600);
+      } else if (endNode) {
+        endNode.classList.add('is-step-active');
+      }
+    }
+    nextStep();
+  }
+
+  const problemObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          startFlowAnimation();
+          problemObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+  problemObserver.observe(flowWith);
+}
 
 /* =========================================================
    System stages (The System section)
@@ -465,14 +517,29 @@ if (leadForm) {
     const submitBtn = leadForm.querySelector('button[type="submit"]');
     submitBtn.disabled = true;
     leadStatus.dataset.state = 'pending';
-    leadStatus.textContent = 'Sending\u2026';
     track('demo-lead-submit');
 
-    window.setTimeout(() => {
-      leadStatus.dataset.state = 'success';
-      leadStatus.textContent = 'This is a demo, so nothing was actually sent \u2014 but this is exactly the moment a real webhook would fire.';
-      submitBtn.disabled = false;
-      leadForm.reset();
-    }, 700);
+    const flowNodes = leadForm.closest('.demo-card').querySelectorAll('.demo-flow .df-node');
+    let step = 0;
+
+    function highlightStep() {
+      if (step > 0 && flowNodes[step - 1]) {
+        flowNodes[step - 1].classList.remove('is-flowing');
+      }
+      if (step < flowNodes.length) {
+        flowNodes[step].classList.add('is-flowing');
+        step++;
+        setTimeout(highlightStep, 300);
+      } else {
+        leadStatus.dataset.state = 'success';
+        leadStatus.textContent = 'This is a demo, so nothing was actually sent \u2014 but this is exactly the moment a real webhook would fire.';
+        submitBtn.disabled = false;
+        leadForm.reset();
+        setTimeout(() => {
+          flowNodes.forEach((n) => n.classList.remove('is-flowing'));
+        }, 2000);
+      }
+    }
+    highlightStep();
   });
 }

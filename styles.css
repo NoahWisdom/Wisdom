@@ -45,7 +45,7 @@
   --measure: 62ch;
   --radius: 6px;
   --radius-sm: 4px;
-  --gap-section: clamp(3rem, 6vw, 5rem);
+  --gap-section: clamp(2.25rem, 4.5vw, 3.5rem);
 }
 
 /* =========================================================
@@ -87,18 +87,27 @@
     overflow-x: hidden;
   }
 
-  /* Subtle grid background */
+  /* Subtle grid + dots + glow background */
   body::before {
     content: "";
     position: fixed;
     inset: 0;
     background-image:
       linear-gradient(var(--line-soft) 1px, transparent 1px),
-      linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
-    background-size: 48px 48px;
-    background-position: -1px -1px;
-    mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 80%);
-    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 80%);
+      linear-gradient(90deg, var(--line-soft) 1px, transparent 1px),
+      radial-gradient(circle, var(--line-strong) 0.5px, transparent 0.5px);
+    background-size: 48px 48px, 48px 48px, 48px 48px;
+    background-position: -1px -1px, -1px -1px, 0 0;
+    mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, #000 20%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, #000 20%, transparent 75%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(ellipse 50% 35% at 50% -5%, rgba(232, 163, 61, 0.06), transparent 70%);
     pointer-events: none;
     z-index: 0;
   }
@@ -386,6 +395,12 @@
     stroke: var(--border-strong);
     stroke-width: 1.5;
     stroke-dasharray: 4 4;
+    animation: flow-dash 1.5s linear infinite;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    @keyframes flow-dash {
+      to { stroke-dashoffset: -16; }
+    }
   }
   .flow-nodes .fn rect {
     fill: var(--surface-raised);
@@ -401,13 +416,15 @@
     text-anchor: middle;
     pointer-events: none;
   }
-  .flow-nodes .fn:hover rect {
-    stroke: var(--accent);
-    fill: var(--accent-soft);
-  }
+  .flow-nodes .fn { cursor: pointer; }
+  .flow-nodes .fn:hover rect,
   .flow-nodes .fn.is-active rect {
     stroke: var(--accent);
     fill: var(--accent-soft);
+  }
+  .flow-links line.is-lit {
+    stroke: var(--accent);
+    stroke-width: 2;
   }
   .flow-tooltip {
     min-height: 2.2em;
@@ -539,9 +556,24 @@
     border-top-color: var(--accent);
   }
 
-  /* Animated flow for "with system" */
+  /* Interactive flow for "with system" */
+  .fv-good, .fv-arrow-active {
+    opacity: 0.35;
+    transition: opacity 0.3s, border-color 0.3s, background 0.3s;
+  }
+  .fv-end-good { opacity: 0.35; transition: opacity 0.3s; }
+  .flow-vertical.is-active .fv-good,
+  .flow-vertical.is-active .fv-arrow-active,
+  .flow-vertical.is-active .fv-end-good {
+    opacity: 1;
+  }
+  .fv-good.is-step-active {
+    border-color: var(--accent) !important;
+    background: var(--accent-soft);
+    opacity: 1 !important;
+  }
   @media (prefers-reduced-motion: no-preference) {
-    .fv-arrow-active {
+    .flow-vertical.is-active .fv-arrow-active {
       background: linear-gradient(to bottom, transparent, var(--accent), transparent);
       background-size: 100% 200%;
       animation: flow-down 1.8s linear infinite;
@@ -549,13 +581,6 @@
     @keyframes flow-down {
       0% { background-position: 0% -100%; }
       100% { background-position: 0% 100%; }
-    }
-    .fv-good {
-      animation: node-glow 3s ease-in-out infinite;
-    }
-    @keyframes node-glow {
-      0%, 100% { border-color: var(--border-strong); }
-      50% { border-color: color-mix(in oklab, var(--accent) 40%, var(--border-strong)); }
     }
   }
 
@@ -921,6 +946,30 @@
     background: var(--accent-soft);
   }
   .df-arrow { color: var(--text-dim); font-size: 0.8rem; }
+  .df-node.is-flowing {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-soft);
+  }
+
+  .demo-flow-v {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+    margin-block-start: 0.75rem;
+  }
+  .demo-flow-v .df-node { font-size: 0.76rem; padding: 0.2rem 0.55rem; }
+  .demo-flow-v .df-varrow {
+    color: var(--text-dim);
+    font-size: 0.7rem;
+    padding-inline-start: 0.6rem;
+  }
+  .demo-flow-v .df-node.is-flowing {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-soft);
+  }
 
   .lead-form { margin-block-start: 1rem; }
   .field { margin-block-end: 0.85rem; display: flex; flex-direction: column; gap: 0.35rem; }
