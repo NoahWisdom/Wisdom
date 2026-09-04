@@ -3,17 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Wisdom Noah — AI systems that turn attention into customers</title>
-<meta name="description" content="Wisdom Noah builds AI-powered websites, assistants and automation for small businesses — connected systems that turn attention into customers.">
-<meta name="theme-color" content="#10151d">
+<title>Wisdom Noah — AI Systems & Automation</title>
+<meta name="description" content="I build AI-powered websites, assistants and automation systems that help businesses attract, convert and retain customers.">
+<meta name="theme-color" content="#0a0d12">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Wisdom Noah — AI systems that turn attention into customers">
+<meta property="og:title" content="Wisdom Noah — AI Systems & Automation">
 <meta property="og:description" content="Websites, AI assistants and automation designed to help small businesses attract, convert and retain customers.">
 <meta property="og:site_name" content="Wisdom Noah">
 
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230a0d12'/><text x='50' y='66' font-family='monospace' font-size='42' font-weight='bold' text-anchor='middle' fill='%23e8a33d'>WN</text></svg>">
+
 <link rel="preload" href="styles.css" as="style">
 <link rel="stylesheet" href="styles.css">
+  <meta property="og:image" content="https://bolt.new/static/og_default.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
 </head>
 <body>
 
@@ -34,11 +39,12 @@
 
     <nav class="primary-nav" id="primaryNav" aria-label="Primary">
       <a href="#top">Home</a>
+      <a href="#system">System</a>
       <a href="#build">What I Build</a>
       <a href="#demos">Demos</a>
       <a href="#lab">Future Lab</a>
       <a href="#about">About</a>
-      <a href="#contact" class="nav-cta">Contact</a>
+      <a href="#contact" class="nav-cta">Work With Me</a>
     </nav>
   </div>
 </header>
@@ -49,89 +55,160 @@
   <section class="hero" aria-label="Introduction">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <h1>I build AI-powered systems that turn attention into customers.</h1>
-        <p class="hero-sub">Websites, AI assistants, automation and digital growth systems designed to help small businesses attract, convert and retain customers — without hiring a whole team to do it.</p>
+        <span class="eyebrow">AI Systems Engineer · Nigeria</span>
+        <h1>I build AI-powered systems that turn <span class="hl">attention</span> into <span class="hl">customers</span>.</h1>
+        <p class="hero-sub">Websites, AI assistants, automation and digital growth systems designed to help businesses attract, convert and retain customers — without hiring a whole team to do it.</p>
         <div class="hero-actions">
-          <a href="#build" class="btn btn-primary" data-track="cta-see-what-i-build">See what I can build</a>
-          <a href="#contact" class="btn btn-ghost" data-track="cta-work-with-me">Work with me</a>
+          <a href="#system" class="btn btn-primary" data-track="cta-explore-system">Explore the System</a>
+          <a href="#contact" class="btn btn-ghost" data-track="cta-work-with-me">Work With Me</a>
         </div>
       </div>
 
       <div class="hero-visual" aria-hidden="false">
-        <p class="visual-caption" id="pipelineCaption">One connected path, from a follower to a returning customer.</p>
-        <svg class="pipeline-svg" id="pipelineSvg" viewBox="0 0 320 520" role="img" aria-labelledby="pipelineCaption">
-          <!-- connector line -->
-          <path id="pipelinePath" class="pipeline-path" d="M 160 30 L 160 490" />
-          <!-- nodes -->
-          <g class="pipeline-node" style="--i:0"><circle cx="160" cy="30" r="6"/><text x="182" y="35">Social media</text></g>
-          <g class="pipeline-node" style="--i:1"><circle cx="160" cy="100" r="6"/><text x="182" y="105">Website</text></g>
-          <g class="pipeline-node" style="--i:2"><circle cx="160" cy="170" r="6"/><text x="182" y="175">AI assistant</text></g>
-          <g class="pipeline-node" style="--i:3"><circle cx="160" cy="240" r="6"/><text x="182" y="245">Lead</text></g>
-          <g class="pipeline-node" style="--i:4"><circle cx="160" cy="310" r="6"/><text x="182" y="315">WhatsApp</text></g>
-          <g class="pipeline-node" style="--i:5"><circle cx="160" cy="380" r="6"/><text x="182" y="385">Purchase</text></g>
-          <g class="pipeline-node" style="--i:6"><circle cx="160" cy="450" r="6"/><text x="182" y="455">Follow-up</text></g>
-          <g class="pipeline-node" style="--i:7"><circle cx="160" cy="490" r="6"/><text x="182" y="495">Retention</text></g>
-        </svg>
+        <div class="flow-viz" id="heroFlow">
+          <div class="flow-viz-header">
+            <span class="flow-viz-title">Customer System</span>
+            <span class="flow-viz-badge">Demo System</span>
+          </div>
+          <svg class="flow-svg" viewBox="0 0 340 460" role="img" aria-labelledby="flowVizCaption">
+            <title id="flowVizCaption">A connected customer journey from social media to retention</title>
+            <g class="flow-links">
+              <line x1="170" y1="52" x2="170" y2="88"/>
+              <line x1="170" y1="132" x2="170" y2="168"/>
+              <line x1="170" y1="212" x2="170" y2="248"/>
+              <line x1="170" y1="292" x2="120" y2="328"/>
+              <line x1="170" y1="292" x2="220" y2="328"/>
+              <line x1="120" y1="372" x2="170" y2="408"/>
+              <line x1="220" y1="372" x2="170" y2="408"/>
+            </g>
+            <g class="flow-nodes">
+              <g class="fn" data-key="social" transform="translate(170,30)">
+                <rect x="-70" y="-22" width="140" height="44" rx="4"/>
+                <text y="5">Social Media</text>
+              </g>
+              <g class="fn" data-key="website" transform="translate(170,110)">
+                <rect x="-70" y="-22" width="140" height="44" rx="4"/>
+                <text y="5">Website</text>
+              </g>
+              <g class="fn" data-key="ai" transform="translate(170,190)">
+                <rect x="-70" y="-22" width="140" height="44" rx="4"/>
+                <text y="5">AI Assistant</text>
+              </g>
+              <g class="fn" data-key="lead" transform="translate(170,270)">
+                <rect x="-70" y="-22" width="140" height="44" rx="4"/>
+                <text y="5">Lead</text>
+              </g>
+              <g class="fn" data-key="whatsapp" transform="translate(120,350)">
+                <rect x="-55" y="-22" width="110" height="44" rx="4"/>
+                <text y="5">WhatsApp</text>
+              </g>
+              <g class="fn" data-key="booking" transform="translate(220,350)">
+                <rect x="-55" y="-22" width="110" height="44" rx="4"/>
+                <text y="5">Booking</text>
+              </g>
+              <g class="fn" data-key="retention" transform="translate(170,430)">
+                <rect x="-70" y="-22" width="140" height="44" rx="4"/>
+                <text y="5">Retention</text>
+              </g>
+            </g>
+          </svg>
+          <div class="flow-tooltip" id="flowTooltip" role="status" aria-live="polite"></div>
+        </div>
+
+        <div class="system-status">
+          <span class="ss-label">System Status</span>
+          <ul class="ss-list">
+            <li><span class="ss-dot"></span>Website</li>
+            <li><span class="ss-dot"></span>AI Assistant</li>
+            <li><span class="ss-dot"></span>Automation</li>
+            <li><span class="ss-dot"></span>Lead Capture</li>
+            <li><span class="ss-dot"></span>Follow-up</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ THE PROBLEM ============ -->
+  <!-- ============ PROBLEM ============ -->
   <section class="problem" aria-labelledby="problemHeading">
     <div class="wrap">
+      <span class="eyebrow">The Problem</span>
       <h2 id="problemHeading">Getting attention isn't the same as getting customers.</h2>
-      <p class="section-lede">Most small businesses already have followers, visitors, questions and leads. What's usually missing is the connective tissue between them — so a lot of that attention just leaks away.</p>
+      <p class="section-lede">Most small businesses already have followers, visitors, questions and leads. What's missing is the connective tissue between them — so attention leaks away.</p>
 
       <div class="compare-grid">
-        <div class="compare-col compare-without">
-          <h3>Without a system</h3>
-          <ol class="flow-list flow-broken">
-            <li>Someone follows your page</li>
-            <li>They ask a question in the comments</li>
-            <li>No one answers for a day or two</li>
-            <li class="flow-end">They find someone else instead</li>
-          </ol>
+        <div class="compare-panel compare-without">
+          <span class="compare-tag">Without a System</span>
+          <div class="flow-vertical" id="flowWithout">
+            <div class="fv-node fv-bad">Follower</div>
+            <div class="fv-arrow"></div>
+            <div class="fv-node fv-bad">Question</div>
+            <div class="fv-arrow"></div>
+            <div class="fv-node fv-bad">Manual reply</div>
+            <div class="fv-arrow fv-arrow-fade"></div>
+            <div class="fv-node fv-bad">Waiting</div>
+            <div class="fv-arrow fv-arrow-fade"></div>
+            <div class="fv-node fv-end-bad">Customer disappears</div>
+          </div>
         </div>
-        <div class="compare-col compare-with">
-          <h3>With a system</h3>
-          <ol class="flow-list flow-connected">
-            <li>Someone follows your page</li>
-            <li>They visit your website</li>
-            <li>Your AI assistant answers instantly</li>
-            <li>The lead is captured automatically</li>
-            <li>They're guided to WhatsApp</li>
-            <li>They book, buy, or ask for a quote</li>
-            <li class="flow-end">Automation follows up, no one forgotten</li>
-          </ol>
+
+        <div class="compare-panel compare-with">
+          <span class="compare-tag">With a Connected System</span>
+          <div class="flow-vertical" id="flowWith">
+            <div class="fv-node fv-good">Follower</div>
+            <div class="fv-arrow fv-arrow-active"></div>
+            <div class="fv-node fv-good">Website</div>
+            <div class="fv-arrow fv-arrow-active"></div>
+            <div class="fv-node fv-good">AI assistant</div>
+            <div class="fv-arrow fv-arrow-active"></div>
+            <div class="fv-node fv-good">Lead captured</div>
+            <div class="fv-arrow fv-arrow-active"></div>
+            <div class="fv-node fv-good">WhatsApp / Booking</div>
+            <div class="fv-arrow fv-arrow-active"></div>
+            <div class="fv-node fv-end-good">Follow-up · No one forgotten</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ MY SYSTEM ============ -->
-  <section class="system" id="build" aria-labelledby="systemHeading">
+  <!-- ============ THE SYSTEM ============ -->
+  <section class="system" id="system" aria-labelledby="systemHeading">
     <div class="wrap">
+      <span class="eyebrow">The System</span>
       <h2 id="systemHeading">One connected system. Multiple growth opportunities.</h2>
       <p class="section-lede">Each stage does one job well. Together, they cover the whole distance between a stranger scrolling past and a customer who comes back.</p>
 
       <div class="stage-grid" id="stageGrid">
-        <button class="stage-btn" data-stage="attract" aria-expanded="false">
-          <span class="stage-num">01</span><span class="stage-name">Attract</span>
+        <button class="stage-card" data-stage="attract" aria-expanded="false">
+          <span class="stage-num">01</span>
+          <span class="stage-name">Attract</span>
+          <span class="stage-sub">Social media + content</span>
         </button>
-        <button class="stage-btn" data-stage="capture" aria-expanded="false">
-          <span class="stage-num">02</span><span class="stage-name">Capture</span>
+        <button class="stage-card" data-stage="capture" aria-expanded="false">
+          <span class="stage-num">02</span>
+          <span class="stage-name">Capture</span>
+          <span class="stage-sub">Website + landing pages</span>
         </button>
-        <button class="stage-btn" data-stage="assist" aria-expanded="false">
-          <span class="stage-num">03</span><span class="stage-name">Assist</span>
+        <button class="stage-card" data-stage="assist" aria-expanded="false">
+          <span class="stage-num">03</span>
+          <span class="stage-name">Assist</span>
+          <span class="stage-sub">AI assistant</span>
         </button>
-        <button class="stage-btn" data-stage="convert" aria-expanded="false">
-          <span class="stage-num">04</span><span class="stage-name">Convert</span>
+        <button class="stage-card" data-stage="convert" aria-expanded="false">
+          <span class="stage-num">04</span>
+          <span class="stage-name">Convert</span>
+          <span class="stage-sub">WhatsApp + booking + purchase</span>
         </button>
-        <button class="stage-btn" data-stage="followup" aria-expanded="false">
-          <span class="stage-num">05</span><span class="stage-name">Follow up</span>
+        <button class="stage-card" data-stage="followup" aria-expanded="false">
+          <span class="stage-num">05</span>
+          <span class="stage-name">Follow up</span>
+          <span class="stage-sub">Automated communication</span>
         </button>
-        <button class="stage-btn" data-stage="retain" aria-expanded="false">
-          <span class="stage-num">06</span><span class="stage-name">Retain</span>
+        <button class="stage-card" data-stage="retain" aria-expanded="false">
+          <span class="stage-num">06</span>
+          <span class="stage-name">Retain</span>
+          <span class="stage-sub">Ongoing customer communication</span>
         </button>
       </div>
 
@@ -144,10 +221,16 @@
   <!-- ============ AI ASSISTANT ============ -->
   <section class="assistant" id="assistant" aria-labelledby="assistantHeading">
     <div class="wrap">
-      <h2 id="assistantHeading">Ask my assistant what I do</h2>
-      <p class="section-lede">This is a small, honest version of the same kind of assistant I build for clients. It only answers from what's actually on this page — it won't make things up.</p>
+      <span class="eyebrow">Live Demo</span>
+      <h2 id="assistantHeading">Ask my AI.</h2>
+      <p class="section-lede">Want to know what I build? Ask. This is a small, honest version of the same kind of assistant I build for clients — it only answers from what's on this page.</p>
 
       <div class="chat-widget" role="group" aria-label="Assistant chat">
+        <div class="chat-header">
+          <span class="chat-dot"></span>
+          <span class="chat-title">AI Assistant</span>
+          <span class="chat-status">Online · Demo</span>
+        </div>
         <div class="chat-log" id="chatLog" aria-live="polite">
           <div class="chat-msg chat-msg-bot">
             <p>Hi — I can tell you what Wisdom builds, who it's for, and how it works. Try one of the questions below, or type your own.</p>
@@ -155,10 +238,10 @@
         </div>
 
         <div class="chat-chips" id="chatChips">
-          <button type="button" class="chip">What does he do?</button>
+          <button type="button" class="chip">What does Wisdom do?</button>
           <button type="button" class="chip">Can he build an AI chatbot?</button>
-          <button type="button" class="chip">I run a clothing business — what could he build for me?</button>
-          <button type="button" class="chip">I want more customers. Where do I start?</button>
+          <button type="button" class="chip">I run a clothing business — what could he build?</button>
+          <button type="button" class="chip">I want more customers. Where should I start?</button>
         </div>
 
         <form class="chat-form" id="chatForm">
@@ -171,53 +254,71 @@
   </section>
 
   <!-- ============ SERVICES ============ -->
-  <section class="services" aria-labelledby="servicesHeading">
+  <section class="services" id="build" aria-labelledby="servicesHeading">
     <div class="wrap">
-      <h2 id="servicesHeading">What I build, and what it does for you</h2>
+      <span class="eyebrow">What I Build</span>
+      <h2 id="servicesHeading">Five building blocks. One connected system.</h2>
 
-      <div class="service-row">
-        <h3>Websites</h3>
-        <p class="service-outcome">Turn online attention into a professional digital home.</p>
-        <ul class="service-caps">
-          <li>Business websites</li><li>Landing pages</li><li>Responsive design</li>
-          <li>Conversion-focused pages</li><li>Interactive experiences</li>
-        </ul>
-      </div>
+      <div class="service-grid">
+        <article class="service-card" data-service="build">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="6" y="10" width="36" height="24" rx="2"/><line x1="6" y1="18" x2="42" y2="18"/><circle cx="10" cy="14" r="1.2" fill="currentColor"/><circle cx="14" cy="14" r="1.2" fill="currentColor"/><line x1="14" y1="26" x2="34" y2="26"/></svg>
+          </div>
+          <span class="service-tag">01 · Build</span>
+          <h3>Websites</h3>
+          <p>Turn online attention into a professional digital home.</p>
+          <ul class="service-caps">
+            <li>Business websites</li><li>Landing pages</li><li>Responsive design</li><li>Conversion-focused pages</li>
+          </ul>
+        </article>
 
-      <div class="service-row">
-        <h3>AI assistants</h3>
-        <p class="service-outcome">Help customers get answers instantly, day or night.</p>
-        <ul class="service-caps">
-          <li>Website AI assistants</li><li>FAQ systems</li><li>Product &amp; service guidance</li>
-          <li>Lead qualification</li><li>Customer support</li>
-        </ul>
-      </div>
+        <article class="service-card" data-service="intelligence">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="24" r="14"/><circle cx="24" cy="24" r="4" fill="currentColor"/><line x1="24" y1="10" x2="24" y2="16"/><line x1="24" y1="32" x2="24" y2="38"/><line x1="10" y1="24" x2="16" y2="24"/><line x1="32" y1="24" x2="38" y2="24"/></svg>
+          </div>
+          <span class="service-tag">02 · Intelligence</span>
+          <h3>AI Assistants</h3>
+          <p>Help customers get answers instantly, day or night.</p>
+          <ul class="service-caps">
+            <li>Website AI</li><li>FAQ systems</li><li>Lead qualification</li><li>Customer guidance</li>
+          </ul>
+        </article>
 
-      <div class="service-row">
-        <h3>Business automation</h3>
-        <p class="service-outcome">Reduce the repetitive manual work behind the scenes.</p>
-        <ul class="service-caps">
-          <li>n8n workflows</li><li>API integrations</li><li>Lead automation</li>
-          <li>Follow-up systems</li><li>Notifications &amp; data processing</li>
-        </ul>
-      </div>
+        <article class="service-card" data-service="automate">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="24" r="5"/><circle cx="36" cy="14" r="5"/><circle cx="36" cy="34" r="5"/><line x1="17" y1="22" x2="31" y2="16"/><line x1="17" y1="26" x2="31" y2="32"/></svg>
+          </div>
+          <span class="service-tag">03 · Automate</span>
+          <h3>Business Automation</h3>
+          <p>Reduce the repetitive manual work behind the scenes.</p>
+          <ul class="service-caps">
+            <li>n8n workflows</li><li>API integrations</li><li>Webhooks</li><li>Follow-up systems</li>
+          </ul>
+        </article>
 
-      <div class="service-row">
-        <h3>Customer conversion systems</h3>
-        <p class="service-outcome">Move visitors from interest to action.</p>
-        <ul class="service-caps">
-          <li>Lead capture</li><li>WhatsApp flows</li><li>Booking</li>
-          <li>Recommendations</li><li>Consultation flows</li>
-        </ul>
-      </div>
+        <article class="service-card" data-service="convert">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 6 L40 16 L40 32 L24 42 L8 32 L8 16 Z"/><polyline points="24,6 24,24 40,16"/><polyline points="24,24 24,42"/><polyline points="24,24 8,16"/></svg>
+          </div>
+          <span class="service-tag">04 · Convert</span>
+          <h3>Customer Systems</h3>
+          <p>Move visitors from interest to action.</p>
+          <ul class="service-caps">
+            <li>Lead capture</li><li>WhatsApp flows</li><li>Booking</li><li>Consultation flows</li>
+          </ul>
+        </article>
 
-      <div class="service-row">
-        <h3>Social &amp; content</h3>
-        <p class="service-outcome">Bring the right attention into the system in the first place.</p>
-        <ul class="service-caps">
-          <li>Social media management</li><li>Content planning</li>
-          <li>Video editing</li><li>Content optimization</li>
-        </ul>
+        <article class="service-card" data-service="grow">
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6,38 18,26 26,32 42,14"/><polyline points="32,14 42,14 42,24"/></svg>
+          </div>
+          <span class="service-tag">05 · Grow</span>
+          <h3>Social &amp; Content</h3>
+          <p>Bring the right attention into the system in the first place.</p>
+          <ul class="service-caps">
+            <li>Social media</li><li>Content planning</li><li>Video editing</li><li>Content optimization</li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
@@ -225,78 +326,114 @@
   <!-- ============ LIVE DEMOS ============ -->
   <section class="demos" id="demos" aria-labelledby="demosHeading">
     <div class="wrap">
-      <h2 id="demosHeading">See it work</h2>
+      <span class="eyebrow">Product Lab</span>
+      <h2 id="demosHeading">See it work.</h2>
       <p class="section-lede">A few small, real interactions rather than a slideshow of claims.</p>
 
-      <div class="demo-block">
-        <h3>Pick a business, see the system</h3>
-        <p class="demo-note">Select a type of business to see how the same building blocks would come together for it.</p>
-        <div class="biz-picker" id="bizPicker" role="group" aria-label="Choose a business type">
-          <button type="button" class="biz-btn" data-biz="restaurant">Restaurant</button>
-          <button type="button" class="biz-btn" data-biz="clothing">Clothing brand</button>
-          <button type="button" class="biz-btn" data-biz="cleaning">Cleaning service</button>
-          <button type="button" class="biz-btn" data-biz="consultant">Consultant</button>
-          <button type="button" class="biz-btn" data-biz="realestate">Real estate</button>
-          <button type="button" class="biz-btn" data-biz="onlinestore">Online store</button>
-        </div>
-        <div class="biz-output" id="bizOutput" aria-live="polite">
-          <p class="stage-placeholder">Choose a business type above.</p>
-        </div>
-      </div>
+      <div class="demo-grid">
+        <!-- Demo 01 -->
+        <article class="demo-card demo-featured">
+          <span class="demo-num">Demo 01</span>
+          <h3>AI Website Assistant</h3>
+          <p>An assistant that answers from verified info — no hallucinations, no invented claims.</p>
+          <a href="#assistant" class="demo-link" data-track="demo-ai-assistant">Try Demo →</a>
+        </article>
 
-      <div class="demo-block">
-        <h3>Lead capture, in miniature</h3>
-        <p class="demo-note">A working example of the first step of an automated pipeline. In production this posts to a webhook — here it's a self-contained demo.</p>
-        <form class="lead-form" id="leadForm" novalidate>
-          <div class="field">
-            <label for="leadName">Name</label>
-            <input type="text" id="leadName" name="name" autocomplete="name" required minlength="2">
+        <!-- Demo 02 -->
+        <article class="demo-card">
+          <span class="demo-num">Demo 02</span>
+          <h3>Lead Capture System</h3>
+          <p>Visitor → Form → Lead → Database → Notification.</p>
+          <div class="demo-flow">
+            <span class="df-node">Visitor</span>
+            <span class="df-arrow">→</span>
+            <span class="df-node">Form</span>
+            <span class="df-arrow">→</span>
+            <span class="df-node">Lead</span>
+            <span class="df-arrow">→</span>
+            <span class="df-node">Database</span>
+            <span class="df-arrow">→</span>
+            <span class="df-node df-node-end">Notify</span>
           </div>
-          <div class="field">
-            <label for="leadEmail">Email</label>
-            <input type="email" id="leadEmail" name="email" autocomplete="email" required>
-          </div>
-          <div class="field">
-            <label for="leadNeed">What do you need help with?</label>
-            <textarea id="leadNeed" name="need" rows="3" required minlength="5"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Send lead</button>
-          <p class="form-status" id="leadStatus" role="status"></p>
-        </form>
-      </div>
+          <form class="lead-form" id="leadForm" novalidate>
+            <div class="field">
+              <label for="leadName">Name</label>
+              <input type="text" id="leadName" name="name" autocomplete="name" required minlength="2">
+            </div>
+            <div class="field">
+              <label for="leadEmail">Email</label>
+              <input type="email" id="leadEmail" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="leadNeed">What do you need help with?</label>
+              <textarea id="leadNeed" name="need" rows="2" required minlength="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-small">Send Lead</button>
+            <p class="form-status" id="leadStatus" role="status"></p>
+          </form>
+        </article>
 
-      <div class="demo-block">
-        <h3>What happens after the form</h3>
-        <svg class="auto-diagram" viewBox="0 0 640 90" role="img" aria-label="New lead flows to database, then AI qualification, then notification, then follow-up">
-          <g class="auto-step"><rect x="0" y="25" width="120" height="40" rx="4"/><text x="60" y="50">New lead</text></g>
-          <path class="auto-arrow" d="M124 45 L156 45"/>
-          <g class="auto-step"><rect x="160" y="25" width="120" height="40" rx="4"/><text x="220" y="50">Database</text></g>
-          <path class="auto-arrow" d="M284 45 L316 45"/>
-          <g class="auto-step"><rect x="320" y="25" width="140" height="40" rx="4"/><text x="390" y="45">AI qualification</text></g>
-          <path class="auto-arrow" d="M464 45 L496 45"/>
-          <g class="auto-step"><rect x="500" y="25" width="140" height="40" rx="4"/><text x="570" y="50">Notify + follow up</text></g>
-        </svg>
+        <!-- Demo 03 -->
+        <article class="demo-card">
+          <span class="demo-num">Demo 03</span>
+          <h3>Automated Lead Qualification</h3>
+          <p>New Lead → n8n → AI Qualification → Priority → Notification → Follow-up.</p>
+          <div class="demo-flow demo-flow-wrap">
+            <span class="df-node">New Lead</span>
+            <span class="df-arrow">→</span>
+            <span class="df-node">n8n</span>
+            <span class="df-arrow">→</span>
+            <span class="df-node">AI Qual</span>
+            <span class="df-arrow">→</span>
+            <span class="df-node df-node-end">Notify + Follow-up</span>
+          </div>
+        </article>
+
+        <!-- Demo 04 -->
+        <article class="demo-card demo-wide">
+          <span class="demo-num">Demo 04</span>
+          <h3>Business System Simulator</h3>
+          <p>Select a business type to see how the same building blocks come together for it.</p>
+          <div class="biz-picker" id="bizPicker" role="group" aria-label="Choose a business type">
+            <button type="button" class="biz-btn" data-biz="restaurant">Restaurant</button>
+            <button type="button" class="biz-btn" data-biz="clothing">Clothing Brand</button>
+            <button type="button" class="biz-btn" data-biz="cleaning">Cleaning Service</button>
+            <button type="button" class="biz-btn" data-biz="consultant">Consultant</button>
+            <button type="button" class="biz-btn" data-biz="realestate">Real Estate</button>
+            <button type="button" class="biz-btn" data-biz="onlinestore">Online Store</button>
+          </div>
+          <div class="biz-output" id="bizOutput" aria-live="polite">
+            <p class="stage-placeholder">Choose a business type above.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ CASE STUDY STYLE ============ -->
-  <section class="concept" aria-labelledby="conceptHeading">
+  <!-- ============ WHAT I WOULD BUILD ============ -->
+  <section class="transform" aria-labelledby="transformHeading">
     <div class="wrap">
-      <h2 id="conceptHeading">What I would build</h2>
+      <span class="eyebrow">Concept</span>
+      <h2 id="transformHeading">What I would build.</h2>
       <p class="concept-disclaimer">A concept and demonstration, not a real client result — I'm early in my client work and would rather show my thinking than invent a case study.</p>
 
-      <div class="concept-card">
-        <h3>Example: a local clothing brand</h3>
-        <div class="concept-compare">
-          <div>
-            <span class="concept-label">Before</span>
-            <p>Social media → followers → manual replies → lost leads</p>
-          </div>
-          <div>
-            <span class="concept-label">After</span>
-            <p>Social media → website → AI assistant → product recommendation → WhatsApp → follow-up</p>
-          </div>
+      <div class="transform-tabs" id="transformTabs" role="tablist" aria-label="Choose a business example">
+        <button class="tt-btn" data-biz="clothing" role="tab" aria-selected="true">Clothing Brand</button>
+        <button class="tt-btn" data-biz="restaurant" role="tab" aria-selected="false">Restaurant</button>
+        <button class="tt-btn" data-biz="consultant" role="tab" aria-selected="false">Consultant</button>
+      </div>
+
+      <div class="transform-panel" id="transformPanel">
+        <div class="tp-col tp-before">
+          <span class="tp-label">Before</span>
+          <div class="tp-flow" id="tpBefore"></div>
+        </div>
+        <div class="tp-bridge">
+          <svg viewBox="0 0 60 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12 H52" /><path d="M44 6 L52 12 L44 18" /></svg>
+        </div>
+        <div class="tp-col tp-after">
+          <span class="tp-label">After</span>
+          <div class="tp-flow" id="tpAfter"></div>
         </div>
       </div>
     </div>
@@ -305,51 +442,73 @@
   <!-- ============ SKILLS ============ -->
   <section class="skills" aria-labelledby="skillsHeading">
     <div class="wrap">
-      <h2 id="skillsHeading">What I can build today</h2>
-      <ul class="skill-tags">
-        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>AI-assisted development</li>
-        <li>n8n automation</li><li>Basic AI chatbots</li><li>Website development</li>
-        <li>Video editing</li><li>Social media management</li>
-      </ul>
+      <span class="eyebrow">Current Skills</span>
+      <h2 id="skillsHeading">What I can build today.</h2>
+      <p class="section-lede">Honest labels — not exaggerated proficiency bars.</p>
+
+      <div class="skill-grid" id="skillGrid">
+        <div class="skill-item"><span class="skill-name">HTML</span><span class="skill-level level-solid">Building With</span></div>
+        <div class="skill-item"><span class="skill-name">CSS</span><span class="skill-level level-solid">Building With</span></div>
+        <div class="skill-item"><span class="skill-name">JavaScript</span><span class="skill-level level-mid">Working Knowledge</span></div>
+        <div class="skill-item"><span class="skill-name">AI-assisted development</span><span class="skill-level level-solid">Building With</span></div>
+        <div class="skill-item"><span class="skill-name">n8n automation</span><span class="skill-level level-mid">Working Knowledge</span></div>
+        <div class="skill-item"><span class="skill-name">Basic AI chatbots</span><span class="skill-level level-mid">Working Knowledge</span></div>
+        <div class="skill-item"><span class="skill-name">Website development</span><span class="skill-level level-solid">Building With</span></div>
+        <div class="skill-item"><span class="skill-name">Video editing</span><span class="skill-level level-low">Learning</span></div>
+        <div class="skill-item"><span class="skill-name">Social media management</span><span class="skill-level level-low">Learning</span></div>
+      </div>
     </div>
   </section>
 
   <!-- ============ FUTURE LAB ============ -->
   <section class="future-lab" id="lab" aria-labelledby="labHeading">
     <div class="wrap">
-      <h2 id="labHeading">What I'm building toward</h2>
-      <p class="section-lede">I don't just want to use AI. I want to understand how to build the systems around it — so this is the direction, not a claim about where I already am.</p>
+      <span class="eyebrow">Future Lab</span>
+      <h2 id="labHeading">What I'm building toward.</h2>
+      <p class="section-lede">This is the direction, not a claim about where I already am. Click a stage to see what I'm learning.</p>
 
-      <ol class="roadmap">
-        <li><span class="roadmap-num">01</span>Web development</li>
-        <li><span class="roadmap-num">02</span>Software engineering</li>
-        <li><span class="roadmap-num">03</span>Backend systems</li>
-        <li><span class="roadmap-num">04</span>AI engineering</li>
-        <li><span class="roadmap-num">05</span>RAG</li>
-        <li><span class="roadmap-num">06</span>AI agents</li>
-        <li><span class="roadmap-num">07</span>Advanced automation</li>
-        <li><span class="roadmap-num">08</span>Production AI systems</li>
-        <li><span class="roadmap-num">09</span>AI systems engineering</li>
-      </ol>
+      <div class="roadmap" id="roadmap">
+        <button class="roadmap-item" data-rm="0"><span class="roadmap-num">01</span><span>Web Development</span></button>
+        <button class="roadmap-item" data-rm="1"><span class="roadmap-num">02</span><span>Software Engineering</span></button>
+        <button class="roadmap-item" data-rm="2"><span class="roadmap-num">03</span><span>Backend Systems</span></button>
+        <button class="roadmap-item" data-rm="3"><span class="roadmap-num">04</span><span>AI Engineering</span></button>
+        <button class="roadmap-item" data-rm="4"><span class="roadmap-num">05</span><span>RAG</span></button>
+        <button class="roadmap-item" data-rm="5"><span class="roadmap-num">06</span><span>AI Agents</span></button>
+        <button class="roadmap-item" data-rm="6"><span class="roadmap-num">07</span><span>Advanced Automation</span></button>
+        <button class="roadmap-item" data-rm="7"><span class="roadmap-num">08</span><span>Production AI</span></button>
+        <button class="roadmap-item" data-rm="8"><span class="roadmap-num">09</span><span>AI Systems Engineering</span></button>
+      </div>
+
+      <div class="roadmap-detail" id="roadmapDetail" role="region" aria-live="polite">
+        <p class="stage-placeholder">Click a stage to see what I'm learning.</p>
+      </div>
     </div>
   </section>
 
   <!-- ============ ABOUT ============ -->
   <section class="about" id="about" aria-labelledby="aboutHeading">
     <div class="wrap wrap-narrow">
-      <h2 id="aboutHeading">About</h2>
-      <p>I'm a young technology builder learning software engineering, AI and automation by building real systems for real businesses — this site included. I don't just want to use AI tools; I want to understand how to build the systems around them.</p>
+      <span class="eyebrow">About</span>
+      <h2 id="aboutHeading">Building real systems, not collecting tutorials.</h2>
+      <p>Wisdom Noah is a young technology builder studying Computer Science at the University of the People, developing toward software engineering, AI systems and automation.</p>
+      <p>He learns by building real systems for real businesses — this site included. His focus is on using software, AI and automation to solve practical business problems.</p>
+      <blockquote class="about-quote">"I don't just want to use AI. I want to understand how to build systems around it."</blockquote>
     </div>
   </section>
 
   <!-- ============ CONTACT ============ -->
   <section class="contact" id="contact" aria-labelledby="contactHeading">
     <div class="wrap">
-      <h2 id="contactHeading">Have a business problem that could be automated, improved, or solved with software?</h2>
+      <span class="eyebrow">Contact</span>
+      <h2 id="contactHeading">Have a business problem that could be automated, improved or solved with software?</h2>
       <div class="contact-actions">
-        <a href="mailto:wisdomnoah3@gmail.com" class="btn btn-primary" data-track="cta-lets-talk">Let's talk</a>
-        <a href="#assistant" class="btn btn-ghost" data-track="cta-chat-with-ai">Chat with my AI</a>
-        <a href="https://wa.me/+2347044808538" class="btn btn-whatsapp" data-track="cta-whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:wisdomnoah3@gmail.com" class="btn btn-primary" data-track="cta-lets-talk">Let's Talk</a>
+        <a href="#assistant" class="btn btn-ghost" data-track="cta-chat-with-ai">Chat With My AI</a>
+        <a href="https://wa.me/2347044808538" class="btn btn-whatsapp" data-track="cta-whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:wisdomnoah3@gmail.com">wisdomnoah3@gmail.com</a>
+        <a href="https://www.linkedin.com/in/noah-wisdom" target="_blank" rel="noopener">LinkedIn</a>
       </div>
     </div>
   </section>
@@ -358,6 +517,7 @@
 
 <footer class="site-footer">
   <div class="wrap footer-inner">
+    <span class="brand-mark" aria-hidden="true">WN</span>
     <p>&copy; <span id="year"></span> Wisdom Noah. Built by hand, with a system behind it.</p>
   </div>
 </footer>
